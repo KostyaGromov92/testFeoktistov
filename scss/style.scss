@@ -437,9 +437,58 @@ table {
   }
 
   &__wrap--slider {
-    max-width: 1170px;
+    max-width: 1050px;
     margin: 0 auto;
     position: relative;
+    background-image: url(../img/slider-bg.png);
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+
+    &-item {
+      width: 85%;
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      padding-top: 60px;
+      padding-bottom: 140px;
+      box-sizing: border-box;
+    }
+
+    &-title {
+      font-family: 'RalewayMedium';
+      text-align: center;
+      margin-top: -22px;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+      color: #1b7ce0;
+      font-size: 20px;
+    }
+
+    &-text {
+      text-align: center;
+      color: #111111;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Lora', serif;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    &-zoom {
+      background-image: url(../img/zoom.png);
+      display: inline-block;
+      width: 85px;
+      height: 85px;
+      position: absolute;
+      bottom: 170px;
+      z-index: 9999;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
 
     img {
       max-width: 100%;
@@ -461,7 +510,7 @@ table {
     &:before {
       content: '';
       height: 1px;
-      width: 11%;
+      width: 6.1%;
       background-color: #1b7ce0;
       position: absolute;
       right: 0;
@@ -476,11 +525,48 @@ table {
     margin: 0 auto;
     position: relative;
     z-index: 999;
-    background-image: url(../img/slider-bg.png);
-    background-position: center;
-    background-size: 100% 100%;
   }
 }
+
+
+.animate-on {
+  transform: scale(1.1);
+  transition: all .5s ease;
+}
+
+.animate-off {
+  transform: scale(1);
+  transition: all .5s ease;
+}
+
+
+/* Owl navigate */
+
+.owl-nav {
+  position: absolute;
+  top: 0;
+  top: 42%;
+  left: 50%;
+  width: 106%;
+  transform: translate(-50%,-50%);
+}
+
+.owl-prev {
+  float: left;
+  background-image: url(../img/prev.png);
+  display: inline-block;
+  width: 207px;
+  height: 207px;
+}
+
+.owl-next {
+  float: right;
+  background-image: url(../img/next.png);
+  display: inline-block;
+  width: 207px;
+  height: 207px;
+}
+
 
 /*==========  Non-Mobile First Method  ==========*/
 
@@ -532,6 +618,16 @@ table {
     }
   }
 
+  .owl-nav {
+    width: 85%;
+  }
+
+  .owl-next,.owl-prev {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+  }
+
 }
 
 /* Small Devices, Tablets */
@@ -547,6 +643,14 @@ table {
   .work__wrap--text-item {
     width: 80%;
     max-width: 350px;
+  }
+
+  .work__wrap--slider-title, .work__wrap--slider-text {
+    display: none;
+  }
+
+  .work__wrap--slider-zoom {
+    display: none;
   }
 }
 
@@ -582,6 +686,10 @@ table {
 
   .work__wrap--text-title {
     font-size: 14px;
+  }
+
+  .owl-nav {
+    display: none;
   }
 }
 

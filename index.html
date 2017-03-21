@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Test landing</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -88,12 +91,32 @@
             </div>
         </div>
         <div class="work__wrap--slider">
-            <img src="img/slider-bg.png" alt="Image">
+            <ul class="owl-carousel">
+                <li class="work__wrap--slider-item">
+                    <img src="img/slider-img.png" alt="Image"/>
+                    <i class="zoom"></i>
+                    <p class="work__wrap--slider-title">Project name 01</p>
+                    <p class="work__wrap--slider-text">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>MI, 302, Road 22
+                    </p>
+                    <i class="work__wrap--slider-zoom"></i>
+                </li>
+                <li class="work__wrap--slider-item">
+                    <img src="img/slider-img.png" alt="Image"/>
+                    <p class="work__wrap--slider-title">Project name 02</p>
+                    <p class="work__wrap--slider-text">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>MI, 302, Road 22
+                    </p>
+                    <i class="work__wrap--slider-zoom"></i>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
