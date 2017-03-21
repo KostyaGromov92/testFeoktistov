@@ -567,6 +567,31 @@ table {
   height: 207px;
 }
 
+.owl-dots {
+  display: none;
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.owl-dot {
+  display: inline-block;
+  margin-right: 10px;
+  span {
+    background: grey;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+}
+
+.owl-dot.active {
+  span {
+    background-color: black;
+  }
+}
 
 /*==========  Non-Mobile First Method  ==========*/
 
@@ -645,10 +670,6 @@ table {
     max-width: 350px;
   }
 
-  .work__wrap--slider-title, .work__wrap--slider-text {
-    display: none;
-  }
-
   .work__wrap--slider-zoom {
     display: none;
   }
@@ -690,6 +711,14 @@ table {
 
   .owl-nav {
     display: none;
+  }
+
+  .owl-dots {
+    display: block;
+  }
+
+  .work__wrap--slider-title {
+    margin-top: 4px;
   }
 }
 
